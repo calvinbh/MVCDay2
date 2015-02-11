@@ -1,0 +1,11 @@
+﻿@* lowercase model is used only once, at the top of the view, to define what the data-type of Model is *@
+@model OnlineWeek4Day2.Models.Square
+
+<h1>Square!</h1>
+
+<h3>The square is @Model.X by @Model.Y.</h3>
+
+@* Adding in a Partial View for the area *@
+@*<h3>The area of the square is @Model.GetArea()</h3>*@
+
+@Html.Partial("_Area")

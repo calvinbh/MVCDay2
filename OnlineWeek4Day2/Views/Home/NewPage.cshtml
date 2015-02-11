@@ -1,0 +1,16 @@
+﻿@model OnlineWeek4Day2.Models.NewPageViewModel
+
+@foreach (var shape in Model.Shapes)
+{
+    <h1>@shape.GetType().Name</h1>
+    if (shape.GetType().Name == "Circle")
+    {
+        <h3>The Circle's radius is @shape.X</h3>
+    }
+    if (shape.GetType().Name == "Square")
+    {
+        <h3>The Square is @shape.X by @shape.Y.</h3>
+    }
+    @Html.Partial("_Area", shape)
+    <br />
+}
