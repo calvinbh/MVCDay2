@@ -1,5 +1,7 @@
 ﻿@model OnlineWeek4Day2.Models.NewPageViewModel
 
+<b>DisplayNum is @Model.DisplayNum</b>
+
 @foreach (var shape in Model.Shapes)
 {
     <h1>@shape.GetType().Name</h1>

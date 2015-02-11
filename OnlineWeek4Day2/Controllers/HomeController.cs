@@ -29,7 +29,8 @@ namespace OnlineWeek4Day2.Controllers
             return View();
         }
 
-        public ActionResult NewPage()
+        // "int id = -1" is the same as "var id = id || -1"
+        public ActionResult NewPage(int id = -1)
         {
             NewPageViewModel model = new NewPageViewModel();
             model.Shapes = new List<Shape>() {
@@ -42,6 +43,7 @@ namespace OnlineWeek4Day2.Controllers
                 new Circle(10),
                 new Square(9, 31)
             };
+            model.DisplayNum = id;
             return View(model);
         }
     }
